@@ -31,7 +31,7 @@ def toTarget():
                                                        ("all files",
                                                         "*.*")))
     print(sequenceInput.get())
-    target = patchtoTarget(sequenceInput.get().toUppercase(),filename)
+    target = patchtoTarget(sequenceInput.get().upper(),filename)
     patched_sequence.configure(text=target)
 
 
