@@ -141,11 +141,8 @@ def storeES(word_1, word_2, bt,dist,sim):
         i_1, j_1 = backtrace[k+1]
 
         if i_1 > i_0 and j_1 > j_0:  # either update or no-op
-            #if word_1[i_0] == word_2[j_0]:  # no-op, same symbol
-             #  op = " "
-            #else:  # cost increased: update
+
             if word_1[i_0] != word_2[j_0]:
-                op = "u"
                 ES.append("Update <A"+str(i_1)+",B"+str(j_1)+">")
                 u = ET.SubElement(es, 'u')
                 index = ET.SubElement(u, 'index')
@@ -155,7 +152,7 @@ def storeES(word_1, word_2, bt,dist,sim):
                 newData.text = (str(word_2[j_0]))
                 oldData.text = str(word_1[i_0])
         elif i_0 == i_1:  # insertion since same row
-            op = "i"
+
             ES.append("Insert <B"+str(j_1)+">")
             i = ET.SubElement(es, 'i')
             index = ET.SubElement(i, 'index')
@@ -163,19 +160,18 @@ def storeES(word_1, word_2, bt,dist,sim):
             index.text = str(i_0)
             data.text = (str(word_2[j_0]))
         else:  # j_0 == j_1,  deletion
-            op = "d"
+
             ES.append("Delete <A"+str(i_1)+">")
             d = ET.SubElement(es, 'd')
             index = ET.SubElement(d, 'index')
             oldData = ET.SubElement(d, 'oldData')
             oldData.text = word_1[i_0]
             index.text = str(i_0)
-        operations.append(op)
     # write this edit script into an xml file for later use
     b_xml = ET.tostring(root)
     with open("EditScript.xml", "wb") as f:
         f.write(b_xml)
-    return operations, ES
+    return ES
 
 def parseEditScript(path):
 
