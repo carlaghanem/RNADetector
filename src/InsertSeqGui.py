@@ -10,7 +10,7 @@ from tkinter import filedialog
 window = Tk()
 
 # Set window title
-window.title('Calculate ED and ES')
+window.title('Differencing Tool')
 
 # Set window size
 window.geometry("700x500")

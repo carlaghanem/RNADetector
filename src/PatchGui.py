@@ -8,7 +8,7 @@ from tkinter import filedialog
 window = Tk()
 
 # Set window title
-window.title('Patching Gui')
+window.title('Patching Tool')
 
 # Set window size
 window.geometry("700x500")
