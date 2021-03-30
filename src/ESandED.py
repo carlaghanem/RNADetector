@@ -230,13 +230,14 @@ def patchtoInitial(target, path):
     initial = "".join(sList)
     return initial
 
+
 def parseSequences(path):
     tree = ET.parse(path)
-    sequence = []
+    sequences = []
 
     RNAS = tree.findall('RNA')
     for RNA in RNAS:
-        sequence.append(RNA[3].text)
+        sequences.append(RNA[3].text)
 
     print("Parsed successfully")
-    return sequence
+    return sequences
