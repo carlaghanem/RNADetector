@@ -26,11 +26,11 @@ def wagner_fischer(seq1, seq2):
             deletion = EDMatrix[i-1, j] + 1  # cost of deletion is 1 + cost of previous cell
             insertion = EDMatrix[i, j-1] + 1  # cost of insertion is 1 + cost of previous cell
             # cost of previous cell + calculated cost (to take ambiguity into consideration)
-            substitution = EDMatrix[i-1, j-1] + (calculate_update_cost(l_1, l_2))
+            update = EDMatrix[i-1, j-1] + (calculate_update_cost(l_1, l_2))
             # minimum distance between three operations
-            minimum_op = np.min([deletion, insertion, substitution])
+            minimum_op = np.min([deletion, insertion, update])
             # put 1 if the operation cost equal to min (operation completed) and 0 otherwise
-            BMatrix[i, j] = (deletion == minimum_op, substitution == minimum_op, insertion == minimum_op)
+            BMatrix[i, j] = (deletion == minimum_op, update == minimum_op, insertion == minimum_op)
             # adding cost to the edit distance matrix
             EDMatrix[i, j] = minimum_op
     ED = EDMatrix[n-1][m-1]
@@ -141,9 +141,10 @@ def storeES(word_1, word_2, bt,dist,sim):
         i_1, j_1 = backtrace[k+1]
 
         if i_1 > i_0 and j_1 > j_0:  # either update or no-op
-            if word_1[i_0] == word_2[j_0]:  # no-op, same symbol
-                op = " "
-            else:  # cost increased: update
+            #if word_1[i_0] == word_2[j_0]:  # no-op, same symbol
+             #  op = " "
+            #else:  # cost increased: update
+            if word_1[i_0] != word_2[j_0]:
                 op = "u"
                 ES.append("Update <A"+str(i_1)+",B"+str(j_1)+">")
                 u = ET.SubElement(es, 'u')
