@@ -3,15 +3,15 @@
 <RNA>
 <accession>ab04353</accession>
 <description>homo sapiens</description>
-<length>3</length>
-<sequence>MTC</sequence>
+<length>8</length>
+<sequence>MRTCGAAS</sequence>
 </RNA>
 
 <RNA>
 <accession>ab04353</accession>
 <description>homo sapiens</description>
-<length>4</length>
-<sequence>CRRG</sequence>
+<length>6</length>
+<sequence>VNSNAG</sequence>
 </RNA>
 
 
