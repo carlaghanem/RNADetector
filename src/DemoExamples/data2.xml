@@ -1,0 +1,19 @@
+<?xml version= "1.0" ?>
+<RNADataBank>
+<RNA>
+<accession>ab04353</accession>
+<description>homo sapiens</description>
+<length>207</length>
+<sequence>MTC</sequence>
+</RNA>
+
+<RNA>
+<accession>ab04353</accession>
+<description>homo sapiens</description>
+<length>200</length>
+<sequence>CRRG</sequence>
+</RNA>
+
+
+
+</RNADataBank>
