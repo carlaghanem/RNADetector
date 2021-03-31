@@ -3,14 +3,14 @@
 <RNA>
 <accession>ab04353</accession>
 <description>homo sapiens</description>
-<length>207</length>
-<sequence>MRT</sequence>
+<length>8</length>
+<sequence>MRTCGAAS</sequence>
 </RNA>
 
 <RNA>
 <accession>ab04353</accession>
 <description>homo sapiens</description>
-<length>200</length>
+<length>6</length>
 <sequence>VNSNAG</sequence>
 </RNA>
 

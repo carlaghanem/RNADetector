@@ -36,7 +36,8 @@ def wagner_fischer(seq1, seq2):
     ED = EDMatrix[n-1][m-1]
     Sim = 1/(1+ED)
     bt=naive_backtrace(BMatrix)
-    storeES(seq1,seq2,bt,ED,Sim)
+    ES=storeES(seq1,seq2,bt,ED,Sim)
+    print(ES)
     return EDMatrix,ED,Sim
 
 
@@ -126,7 +127,6 @@ def naive_backtrace(B_matrix):
 # we can create XML file from this
 
 def storeES(word_1, word_2, bt,dist,sim):
-    operations = []
     ES = []
     root = ET.Element('root')
     es = ET.SubElement(root,'ES')
@@ -195,9 +195,6 @@ def parseEditScript(path):
     for deletion in deleteElements:
         d = [int(deletion[0].text), deletion[1].text]
         deletions.append(d)
-    print(updates)
-    print(deletions)
-    print(insertions)
     return updates, deletions, insertions
 
 
@@ -226,7 +223,6 @@ def patchtoInitial(target, path):
         sList.insert(int(insertion[0]), insertion[1])
     for update in updates:
         sList[int(update[0])] = update[1]
-    print(updates)
     initial = "".join(sList)
     return initial
 

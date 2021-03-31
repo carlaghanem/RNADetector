@@ -30,9 +30,9 @@ def toTarget():
                                                         "*.xml*"),
                                                        ("all files",
                                                         "*.*")))
-    print(sequenceInput.get())
     target = patchtoTarget(sequenceInput.get().upper(),filename)
     patched_sequence.configure(text=target)
+    print(target)
 
 
 def toInitial():
@@ -42,9 +42,9 @@ def toInitial():
                                                         "*.xml*"),
                                                        ("all files",
                                                         "*.*")))
-    print(sequenceInput.get())
     initial=patchtoInitial(sequenceInput.get(),filename)
     patched_sequence.configure(text=initial)
+    print(initial)
 
 
 # Labels
