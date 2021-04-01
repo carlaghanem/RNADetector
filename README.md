@@ -10,5 +10,5 @@ and edit distance will also be stored in a separate output XML document, that wi
 
 The following graphical user interface was developed to test the functionality of the tool.
 
-![GitHub Logo](/images/logo.png)
-Format: ![Alt Text](url)
+![GitHub Logo](/images/Differencing Tool.png)
+
