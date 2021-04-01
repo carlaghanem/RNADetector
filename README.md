@@ -13,6 +13,7 @@ This is the differencing tool. It takes as input the XML document containing the
 
 This is the patching tool which takes as input either the target or initial sequence, and the user chooses whether he/she are converting from initial to target or vice versa, and gives it the ES XML document. It also displays the patched sequence. 
 Note that the patching tool is independent of the differencing tool and the user can enter a sequence of his own in addition to an edit script of his own on conidition that it matches the format of our XML document structure.
+
 ![GitHub Logo](https://github.com/carlaghanem/RNADetector/blob/main/images/Patching%20Tool.png)
 
 
