@@ -10,5 +10,5 @@ and edit distance will also be stored in a separate output XML document, that wi
 
 The following graphical user interface was developed to test the functionality of the tool.
 
-![GitHub Logo](/images/Differencing Tool.png)
+![GitHub Logo](https://github.com/carlaghanem/RNADetector/blob/main/images/Differencing%20Tool.png)
 
